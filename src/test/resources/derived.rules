@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix opm: <http://openprovenance.org/ontology#>
+
+[derivedArtifact: 
+          (?used rdf:type opm:Used)
+          (?used opm:cause ?artifactSource)
+          (?used opm:effect ?process)
+          (?wgb rdf:type opm:WasGeneratedBy)
+          (?wgb opm:cause ?process)
+          (?wgb opm:effect ?artifactDerived)
+          (?artifactDerived rdf:type opm:Artifact)
+          makeTemp(?wdf)
+          ->
+#          print("HERE" ?artifactSource ?artifactDerived)
+          (?wdf rdf:type opm:WasDerivedFrom)
+          (?wdf opm:cause ?artifactSource)
+          (?wdf opm:effect ?artifactDerived)
+] 

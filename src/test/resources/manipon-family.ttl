@@ -1,0 +1,18 @@
+@prefix person: <http://person/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+
+person:kenneth
+      rel:spouseOf
+              person:sharon .
+
+person:gerald
+      rel:parentOf
+              person:koa , person:jonythyn , person:shayne ;
+      rel:siblingOf
+              person:kenneth , person:desiree ;
+      rel:spouseOf
+              person:monica .
+
+person:jayden
+      rel:childOf
+              person:kenneth .

@@ -1,0 +1,8 @@
+@prefix opmv:    <http://purl.org/net/opmv/ns#> .
+@prefix cdp:     <http://provenance.jpl.nasa.gov/cdp#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix opmo:    <http://openprovenance.org/model/opmo#> .
+
+<http://provenance.jpl.nasa.gov/cdp#file://iearth.jpl.nasa.gov/home/sflops/sciflo/share/sciflo/data/sensors/atrain/airs.aqua/L2/v5/2009/06/22/airx2ret/AIRS.2009.06.22.090.L2.RetStd.v5.2.2.0.G09174072316.hdf/2011-02-28T20_12_15>
+      a       opmv:Artifact ;
+      cdp:hasVersion "v5" .

@@ -1,0 +1,27 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vCard:   <http://www.w3.org/2001/vcard-rdf/3.0#> .
+
+<http://somewhere/GeraldManipon/>
+      vCard:FN "Gerald Manipon" ;
+      vCard:N [ vCard:Family "Manipon" ;
+                vCard:Given "Gerald"
+              ] .
+
+<http://somewhere/LeiPan/>
+      vCard:FN "Lei Pan" ;
+      vCard:N [ vCard:Family "Pan" ;
+                vCard:Given "Lei"
+              ] .
+
+<http://somewhere/BrianWilson/>
+      vCard:FN "Brian Wilson" ;
+      vCard:N [ vCard:Family "Wilson" ;
+                vCard:Given "Brian"
+              ] .
+
+<http://somewhere/HookHoa/>
+      vCard:FN "Hook Hua" ;
+      vCard:N [ vCard:Family "Hua" ;
+                vCard:Given "Hook"
+              ] .
+

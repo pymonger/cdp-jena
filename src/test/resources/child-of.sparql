@@ -1,0 +1,4 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX person: <http://person/>
+PREFIX rel: <http://purl.org/vocab/relationship/>
+SELECT ?name WHERE {?name rel:childOf person:gerald}

@@ -1,0 +1,11 @@
+@prefix opmv:    http://purl.org/net/opmv/ns#
+@prefix cdp:     http://provenance.jpl.nasa.gov/cdp#
+@prefix rdf:     http://www.w3.org/1999/02/22-rdf-syntax-ns#
+@prefix opmo:    http://openprovenance.org/model/opmo#
+
+[airsVersion:
+    (?artifact rdf:type opmv:Artifact)
+    regex(str(?artifact), '.*AIRS\..*(v.)\..*', ?vers)
+    ->
+    (?artifact cdp:hasVersion ?vers)
+]

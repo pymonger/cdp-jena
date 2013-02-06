@@ -1,0 +1,110 @@
+@prefix rdfa:    <http://www.w3.org/ns/rdfa#> .
+@prefix nci:     <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix vcard2006:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsl1999:  <http://www.w3.org/1999/XSL/Transform> .
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix scovo:   <http://purl.org/NET/scovo#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xslwd:   <http://www.w3.org/TR/WD-xsl> .
+@prefix dbpprop:  <http://dbpedia.org/property/> .
+@prefix mf:      <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions/#> .
+@prefix xf:      <http://www.w3.org/2004/07/xpath-functions> .
+@prefix bif:     <bif:> .
+@prefix mesh:    <http://purl.org/commons/record/mesh/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix virtcxml:  <http://www.openlinksw.com/schemas/virtcxml#> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix yago:    <http://dbpedia.org/class/yago/> .
+@prefix protseq:  <http://purl.org/science/protein/bysequence/> .
+@prefix sc:      <http://purl.org/science/owl/sciencecommons/> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfdf:   <http://www.openlinksw.com/virtrdf-data-formats#> .
+@prefix vcard:   <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix product:  <http://www.buy.com/rss/module/productV2/> .
+@prefix math:    <http://www.w3.org/2000/10/swap/math#> .
+@prefix obo:     <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix sql:     <sql:> .
+@prefix virtrdf:  <http://www.openlinksw.com/schemas/virtrdf#> .
+@prefix dawgt:   <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsl10:   <http://www.w3.org/XSL/Transform/1.0> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix go:      <http://purl.org/obo/owl/GO#> .
+
+<http://somewhere/KimKardashian/>
+      vcard:FN "Kim Kardashian" ;
+      vcard:N [ vcard:Family "Kardashian" ;
+                vcard:Given "Kim"
+              ] .
+
+<http://somewhere/RebeccaSmith/>
+      vcard:FN "Becky Smith" ;
+      vcard:N [ vcard:Family "Smith" ;
+                vcard:Given "Rebecca"
+              ] .
+
+<http://somewhere/SarahJones/>
+      vcard:FN "Sarah Jones" ;
+      vcard:N [ vcard:Family "Jones" ;
+                vcard:Given "Sarah"
+              ] .
+
+<http://somewhere/MagicJohnson/>
+      vcard:FN "Magic Johnson" ;
+      vcard:N [ vcard:Family "Johnson" ;
+                vcard:Given "Magic"
+              ] .
+
+<http://somewhere/BrianWilson/>
+      vcard:FN "Brian Wilson" ;
+      vcard:N [ vcard:Family "Wilson" ;
+                vcard:Given "Brian"
+              ] .
+
+<http://somewhere/KobeBryant/>
+      vcard:FN "Kobe Bryant" ;
+      vcard:N [ vcard:Family "Bryant" ;
+                vcard:Given "Kobe"
+              ] .
+
+<http://somewhere/MattJones/>
+      vcard:FN "Matt Jones" ;
+      vcard:N [ vcard:Family "Jones" ;
+                vcard:Given "Matthew"
+              ] .
+
+<http://somewhere/GeraldManipon/>
+      vcard:FN "Gerald Manipon" ;
+      vcard:N [ vcard:Family "Manipon" ;
+                vcard:Given "Gerald"
+              ] .
+
+<http://somewhere/LeiPan/>
+      vcard:FN "Lei Pan" ;
+      vcard:N [ vcard:Family "Pan" ;
+                vcard:Given "Lei"
+              ] .
+
+<http://somewhere/DonJohnson/>
+      vcard:FN "Don Johnson" ;
+      vcard:N [ vcard:Family "Johnson" ;
+                vcard:Given "Don"
+              ] .
+
+<http://somewhere/JohnSmith/>
+      vcard:FN "John Smith" ;
+      vcard:N [ vcard:Family "Smith" ;
+                vcard:Given "John"
+              ] .
+
+<http://somewhere/HookHoa/>
+      vcard:FN "Hook Hua" ;
+      vcard:N [ vcard:Family "Hua" ;
+                vcard:Given "Hook"
+              ] .

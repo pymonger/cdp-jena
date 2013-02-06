@@ -1,0 +1,108 @@
+@prefix rel: http://purl.org/vocab/relationship/
+
+#############################################
+#symmetric rules
+#############################################
+[siblingSym: 
+    (?siblingA rel:siblingOf ?siblingB)
+    ->
+    (?siblingB rel:siblingOf ?siblingA)
+] 
+
+[childSym:
+    (?parent rel:parentOf ?child)
+    ->
+    (?child rel:childOf ?parent)
+]
+
+[parentSym:
+    (?child rel:childOf ?parent)
+    ->
+    (?parent rel:parentOf ?child)
+]
+
+[spouseSym:
+    (?member rel:spouseOf ?spouse)
+    ->
+    (?spouse rel:spouseOf ?member)
+]
+
+[inlawSym:
+    (?memberA rel:inlawOf ?memberB)
+    ->
+    (?memberB rel:inlawOf ?memberA)
+]
+
+#not needed; cousin transitive rule handles it
+#[cousinSym:
+#    (?memberA rel:cousinOf ?memberB)
+#    ->
+#    (?memberB rel:cousinOf ?memberA)
+#]
+
+#############################################
+#transitive rules
+#############################################
+
+#kenneth siblingOf desiree
+#symmetric rels handled by siblingSym
+[sibling1:
+    (?siblingA rel:siblingOf ?siblingB)
+    (?siblingB rel:siblingOf ?siblingC)
+    notEqual(?siblingA, ?siblingC)
+    ->
+    (?siblingA rel:siblingOf ?siblingC)
+] 
+
+#jonythyn siblingOf shayne
+#jonythyn siblingOf koa
+#shayne siblingOf koa
+#symmetric rels handled by siblingSym
+[sibling2:
+    (?childA rel:childOf ?parentA)
+    (?childB rel:childOf ?parentA)
+    notEqual(?childA, ?childB)
+    ->
+    (?childA rel:siblingOf ?childB)
+] 
+
+#gerald inlawOf sharon
+#kenneth inlawOf monica
+#symmetric rels handled by inlawSym
+[inlaw1:
+    (?memberA rel:spouseOf ?spouseA)
+    (?memberA rel:siblingOf ?memberB)
+    ->
+    (?spouseA rel:inlawOf ?memberB)
+] 
+
+#monica inlawOf sharon
+#symmetric rels handled by inlawSym
+[inlaw2:
+    (?memberA rel:spouseOf ?spouseA)
+    (?memberB rel:spouseOf ?spouseB)
+    (?memberA rel:siblingOf ?memberB)
+    ->
+    (?spouseA rel:inlawOf ?spouseB)
+] 
+
+#shayne cousinOf jayden
+#jonythyn cousinOf jayden
+#koa cousinOf jayden
+#jayden cousinOf shayne, jonythyn, koa
+[cousin:
+    (?childA rel:childOf ?parentA)
+    (?childB rel:childOf ?parentB)
+    (?parentA rel:siblingOf ?parentB)
+    ->
+    (?childA rel:cousinOf ?childB)
+] 
+
+#monica parentOf jonythyn, shayne, koa
+#sharon parentOf jayden
+[parent:
+    (?member rel:spouseOf ?spouse)
+    (?spouse rel:parentOf ?child)
+    ->
+    (?member rel:parentOf ?child)
+] 

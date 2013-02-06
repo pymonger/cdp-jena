@@ -1,0 +1,28 @@
+@prefix rel: http://purl.org/vocab/relationship/
+
+#symmetric rule for siblingOf
+[sibling: (?memberA rel:siblingOf ?memberB)
+          ->
+          (?memberB rel:siblingOf ?memberA)
+] 
+
+[inlaw1:  (?spouseA rel:inlawOf ?spouseB)
+          <-
+          (?memberA rel:siblingOf ?memberB)
+          (?memberA rel:spouseOf ?spouseA)
+          (?memberB rel:spouseOf ?spouseB)
+] 
+
+[inlaw2:  (?memberA rel:inlawOf ?spouseB)
+          <-
+          (?memberA rel:siblingOf ?memberB)
+          (?memberA rel:spouseOf ?spouseA)
+          (?memberB rel:spouseOf ?spouseB)
+] 
+
+[inlaw3:  (?memberB rel:inlawOf ?spouseA)
+          <-
+          (?memberA rel:siblingOf ?memberB)
+          (?memberA rel:spouseOf ?spouseA)
+          (?memberB rel:spouseOf ?spouseB)
+] 

@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>gov.nasa.jpl.cdp</groupId>
+  <artifactId>cdp-jena</artifactId>
+  <version>0.0.5-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>cdp-jena</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <inherited>true</inherited>
+        <configuration>
+          <archive>                   
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>gov.nasa.jpl.cdp.jena.App</mainClass>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <repositories>
+    <repository>
+      <id>dev.biordf.net</id>
+      <name>BioRDF Maven Repository</name>
+      <url>http://dev.biordf.net/maven</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-io</artifactId>
+    	<version>1.3.2</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.8.2</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>5.1.13</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.mod4j.org.apache.commons</groupId>
+    	<artifactId>cli</artifactId>
+    	<version>1.0.0</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.hp.hpl.jena</groupId>
+    	<artifactId>jena</artifactId>
+    	<version>2.6.4</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.hp.hpl.jena</groupId>
+    	<artifactId>sdb</artifactId>
+    	<version>1.3.4</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.hp.hpl.jena</groupId>
+    	<artifactId>tdb</artifactId>
+    	<version>0.8.10</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+        <!-- 
+        install 3rd party jar in your m2 repo with:
+             
+          mvn install:install-file -Dfile=virt_jena.jar -DgroupId=com.openlinksw -DartifactId=virt_jena_jar -Dversion=2.6.2 -Dpackaging=jar
+        -->
+        <groupId>com.openlinksw</groupId>
+        <artifactId>virt_jena_jar</artifactId>
+        <version>2.6.2</version>
+    </dependency>
+    <dependency>
+        <!-- 
+        install 3rd party jar in your m2 repo with:
+             
+          mvn install:install-file -Dfile=virtjdbc3.jar -DgroupId=com.openlinksw -DartifactId=virtjdbc3_jar -Dversion=3.57 -Dpackaging=jar
+        -->
+        <groupId>com.openlinksw</groupId>
+        <artifactId>virtjdbc3_jar</artifactId>
+        <version>3.57</version>
+    </dependency>
+    <dependency>
+      <groupId>com.clarkparsia.pellet</groupId>
+      <artifactId>pellet-core</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.clarkparsia.pellet</groupId>
+      <artifactId>pellet-jena</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+  </dependencies>
+</project>

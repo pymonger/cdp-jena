@@ -1,0 +1,74 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vCard:   <http://www.w3.org/2001/vcard-rdf/3.0#> .
+
+<http://somewhere/KimKardashian/>
+      vCard:FN "Kim Kardashian" ;
+      vCard:N [ vCard:Family "Kardashian" ;
+                vCard:Given "Kim"
+              ] .
+
+<http://somewhere/RebeccaSmith/>
+      vCard:FN "Becky Smith" ;
+      vCard:N [ vCard:Family "Smith" ;
+                vCard:Given "Rebecca"
+              ] .
+
+<http://somewhere/BrianWilson/>
+      vCard:FN "Brian Wilson" ;
+      vCard:N [ vCard:Family "Wilson" ;
+                vCard:Given "Brian"
+              ] .
+
+<http://somewhere/SarahJones/>
+      vCard:FN "Sarah Jones" ;
+      vCard:N [ vCard:Family "Jones" ;
+                vCard:Given "Sarah"
+              ] .
+
+<http://somewhere/MagicJohnson/>
+      vCard:FN "Magic Johnson" ;
+      vCard:N [ vCard:Family "Johnson" ;
+                vCard:Given "Magic"
+              ] .
+
+<http://somewhere/KobeBryant/>
+      vCard:FN "Kobe Bryant" ;
+      vCard:N [ vCard:Family "Bryant" ;
+                vCard:Given "Kobe"
+              ] .
+
+<http://somewhere/GeraldManipon/>
+      vCard:FN "Gerald Manipon" ;
+      vCard:N [ vCard:Family "Manipon" ;
+                vCard:Given "Gerald"
+              ] .
+
+<http://somewhere/MattJones/>
+      vCard:FN "Matt Jones" ;
+      vCard:N [ vCard:Family "Jones" ;
+                vCard:Given "Matthew"
+              ] .
+
+<http://somewhere/LeiPan/>
+      vCard:FN "Lei Pan" ;
+      vCard:N [ vCard:Family "Pan" ;
+                vCard:Given "Lei"
+              ] .
+
+<http://somewhere/DonJohnson/>
+      vCard:FN "Don Johnson" ;
+      vCard:N [ vCard:Family "Johnson" ;
+                vCard:Given "Don"
+              ] .
+
+<http://somewhere/JohnSmith/>
+      vCard:FN "John Smith" ;
+      vCard:N [ vCard:Family "Smith" ;
+                vCard:Given "John"
+              ] .
+
+<http://somewhere/HookHoa/>
+      vCard:FN "Hook Hua" ;
+      vCard:N [ vCard:Family "Hua" ;
+                vCard:Given "Hook"
+              ] .
